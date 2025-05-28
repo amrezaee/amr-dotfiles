@@ -1,0 +1,66 @@
+[window]
+dimensions = {columns = 90, lines = 30}
+padding = {x=5, y=5}
+decorations_theme_variant = 'Dark'
+
+[scrolling]
+history = 10000
+multiplier = 1
+
+[cursor]
+style = { shape = "Beam", blinking = "off" }
+blink_interval = 1000
+
+[mouse]
+hide_when_typing = true
+ 
+[font]
+# Regular font face
+normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+
+# Optional bold font face
+bold = { family = "MesloLGS Nerd Font", style = "Bold" }
+
+# Optional italic font face
+italic = { family = "MesloLGS Nerd Font", style = "Italic" }
+
+# Font size in points
+size = 12.0
+
+# Optional offset to tweak line spacing or glyph positioning
+offset = { x = 0, y = 0 }
+
+# Optional glyph offset to fine-tune Nerd Font symbols
+glyph_offset = { x = 0, y = 0 }
+
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.normal]
+black   = "#21222c"
+red     = "#ff5555"
+green   = "#50fa7b"
+yellow  = "#f1fa8c"
+blue    = "#bd93f9"
+magenta = "#ff79c6"
+cyan    = "#8be9fd"
+white   = "#f8f8f2"
+
+[colors.bright]
+black   = "#6272a4"
+red     = "#ff6e6e"
+green   = "#69ff94"
+yellow  = "#ffffa5"
+blue    = "#d6acff"
+magenta = "#ff92df"
+cyan    = "#a4ffff"
+white   = "#ffffff"
+
+[keyboard]
+bindings = [
+  {key = 'F11', action = 'ToggleFullscreen'}
+]
+
+# [debug]
+# render_timer = true
