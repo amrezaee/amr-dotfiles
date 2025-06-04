@@ -1,0 +1,44 @@
+root = true
+
+# default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.go]
+# only if using gofmt; otherwise use space/4
+indent_style = tab
+
+# Optional: override Go to use spaces (if not using gofmt)
+# [*.go]
+# indent_style = space
+# indent_size = 4
+
+[*.{yml,yaml,js,json,html,m4,vcxproj,vcxproj.filters}]
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[Makefile.*,*.mk,*.sln,*.pbxproj,*.plist]
+indent_syle = tab
+indent_size = 8
+tab_width = 8
+
+[*.{markdown,md,mkdn}]
+trim_trailing_whitespace = false
+
+[{CMakeLists.txt,cmake/*.cmake}]
+indent_size = 2
+
+[{*.bat,*.rc}]
+end_of_line = crlf
+
+[*.cocci]
+insert_final_newline = true
+
+
