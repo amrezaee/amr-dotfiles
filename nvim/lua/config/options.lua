@@ -4,7 +4,6 @@ vim.g.maplocalleader = '\\'
 vim.g.have_nerd_font = true
 
 vim.opt.number = true
-
 vim.wo.relativenumber = true
 
 vim.opt.cursorline = true
@@ -15,9 +14,9 @@ vim.opt.showmode = false
 
 vim.opt.updatetime = 250
 
-vim.opt.timeoutlen = 800
+vim.opt.timeoutlen = 750
 
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = 'nosplit'
 
 vim.opt.scrolloff = 10
 
@@ -33,10 +32,11 @@ vim.opt.incsearch = true
 
 vim.opt.wrap = false
 vim.opt.breakindent = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+
 vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.smartindent = true
 
@@ -54,3 +54,30 @@ vim.opt.isfname:append '@-@'
 vim.o.splitright = true
 vim.o.splitbelow = true
 -- vim.opt.colorcolumn = "90"
+
+vim.diagnostic.config {
+  severity_sort = true,
+  float = { border = 'rounded', source = 'if_many' },
+  underline = { severity = vim.diagnostic.severity.ERROR },
+  signs = vim.g.have_nerd_font and {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '󰅚 ',
+      [vim.diagnostic.severity.WARN] = '󰀪 ',
+      [vim.diagnostic.severity.INFO] = '󰋽 ',
+      [vim.diagnostic.severity.HINT] = '󰌶 ',
+    },
+  } or {},
+  virtual_text = {
+    source = 'if_many',
+    spacing = 2,
+    format = function(diagnostic)
+      local diagnostic_message = {
+        [vim.diagnostic.severity.ERROR] = diagnostic.message,
+        [vim.diagnostic.severity.WARN] = diagnostic.message,
+        [vim.diagnostic.severity.INFO] = diagnostic.message,
+        [vim.diagnostic.severity.HINT] = diagnostic.message,
+      }
+      return diagnostic_message[diagnostic.severity]
+    end,
+  },
+}

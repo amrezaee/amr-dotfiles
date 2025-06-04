@@ -1,19 +1,6 @@
 require 'config.options'
 require 'config.keybinds'
 
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
-vim.diagnostic.config {
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '',
-      [vim.diagnostic.severity.WARN] = '',
-      [vim.diagnostic.severity.INFO] = '',
-      [vim.diagnostic.severity.HINT] = '󰌵',
-    },
-  },
-}
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
@@ -87,6 +74,7 @@ require('lazy').setup {
     },
   },
 }
+
 -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
 -- Or use telescope!
 -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`

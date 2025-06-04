@@ -1,7 +1,5 @@
 return {
-  {
-    'kylechui/nvim-surround',
-    event = { 'BufReadPre', 'BufNewFile' },
-    config = true,
-  },
+  'kylechui/nvim-surround',
+  event = { 'BufReadPre', 'BufNewFile' },
+  config = true,
 }
