@@ -15,7 +15,7 @@ Checks: >
   clang-analyzer-*,
   cppcoreguidelines-*,
   misc-*,
-  modernize-*,
+  modernize-*, -modernize-use-trailing-return-type,
   performance-*,
 
   portability-std-allocator-const,
