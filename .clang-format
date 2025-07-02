@@ -56,7 +56,7 @@ BracedInitializerIndentWidth: 2
 BreakAfterAttributes: Always
 BreakArrays: false
 BreakBeforeBinaryOperators: None
-BreakBeforeBraces: Stroustrup
+BreakBeforeBraces: WebKit
 BreakBeforeConceptDeclarations: Always
 BreakBeforeInlineASMColon: OnlyMultiline
 BreakBeforeTernaryOperators: false
